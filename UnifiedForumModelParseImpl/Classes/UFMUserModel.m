@@ -68,4 +68,16 @@
     return self;
 }
 
+- (BOOL)isEqualToUserModel:(UFMUserModel *)userModel {
+    return [self.userId isEqualToString:userModel.userId];
+}
+
+- (BOOL)isFollowedByUserModel:(UFMUserModel *)userModel {
+    PFUser *fromUser = (PFUser *)userModel.metaData;
+    PFUser *toUser = (PFUser *)self.metaData;
+    
+    NSError *error = nil;
+    return [UFPFService isFollowFromUser:fromUser toUser:toUser error:&error];
+}
+
 @end

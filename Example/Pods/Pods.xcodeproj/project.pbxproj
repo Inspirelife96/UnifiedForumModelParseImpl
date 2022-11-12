@@ -260,6 +260,10 @@
 		7C2BB2456996735563F2222E0C1598A2 /* PFFilePersistenceGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = D825213D78EF5964D70A53AC515AAA8F /* PFFilePersistenceGroup.m */; };
 		7EBFC2E27C5B69A50CDD500C7C2B23E5 /* PFRESTUserCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = A8F952C380E2487FC52659C966AC79FC /* PFRESTUserCommand.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		7F3F5CB81EEFC6D30DDCEDD97266A193 /* PFCachedQueryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DDE361C5E9077F86F0D5F152618ACC /* PFCachedQueryController.m */; };
+		7F854159291F505400CCF09B /* UIImage+UFMCompress.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F854157291F505400CCF09B /* UIImage+UFMCompress.h */; };
+		7F85415A291F505400CCF09B /* UIImage+UFMCompress.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F854158291F505400CCF09B /* UIImage+UFMCompress.m */; };
+		7F90FBBC291D066400BA57D0 /* UFMConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F90FBBA291D066400BA57D0 /* UFMConstants.h */; };
+		7F90FBBD291D066400BA57D0 /* UFMConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F90FBBB291D066400BA57D0 /* UFMConstants.m */; };
 		8015E48CE4660F9021A8E4E15854EB79 /* PFObject+Deprecated.h in Headers */ = {isa = PBXBuildFile; fileRef = B88A1C044AD8230AB68EDB7FE1217A29 /* PFObject+Deprecated.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8087B711FD1A1C1FB319D943C9FAFE46 /* UFPFService+PostReport.h in Headers */ = {isa = PBXBuildFile; fileRef = 27101F3A89D36A9E39308FAADC9CEB21 /* UFPFService+PostReport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		808CE59945BE40E1F3C696B8790862EA /* PFObjectFileCodingLogic.h in Headers */ = {isa = PBXBuildFile; fileRef = C4EEAF71E49A549DAEE841411E657EC6 /* PFObjectFileCodingLogic.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -653,7 +657,7 @@
 		18762E5419C393628163B974D7C2F15F /* PFUserState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFUserState.h; path = Parse/Parse/Internal/User/State/PFUserState.h; sourceTree = "<group>"; };
 		187638298BEF54994F885A87DCC4769E /* UnifiedForumParseFramework.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = UnifiedForumParseFramework.modulemap; sourceTree = "<group>"; };
 		194F7F4FD68A1B028071D57D41E81501 /* PFURLSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFURLSession.h; path = Parse/Parse/Internal/Commands/CommandRunner/URLSession/Session/PFURLSession.h; sourceTree = "<group>"; };
-		199F4B8CE069319F57C75EFF14D8E9F2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		199F4B8CE069319F57C75EFF14D8E9F2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		19AD42F48D6E19DCA47A379D3C13F9E1 /* Pods-UnifiedForumModelParseImpl_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UnifiedForumModelParseImpl_Tests-Info.plist"; sourceTree = "<group>"; };
 		1AB223BD04DADD89C5B33C41F6B1C39E /* UFPFService+PostReport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UFPFService+PostReport.m"; path = "UnifiedForumParseFramework/Classes/UFPFService+PostReport.m"; sourceTree = "<group>"; };
 		1BB54E71C6AAC660605386E6EF0502A0 /* Parse.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Parse.modulemap; sourceTree = "<group>"; };
@@ -882,7 +886,11 @@
 		7E7564A80E7C06DB44287A44E13BD6BC /* PFPin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFPin.m; path = Parse/Parse/Internal/LocalDataStore/Pin/PFPin.m; sourceTree = "<group>"; };
 		7ED1FF11CE5EB354C49485895904C53A /* Pods-UnifiedForumModelParseImpl_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UnifiedForumModelParseImpl_Example-umbrella.h"; sourceTree = "<group>"; };
 		7F7807858E19D9EE9526CBBB2D8280A8 /* PFMutableFileState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFMutableFileState.m; path = Parse/Parse/Internal/File/State/PFMutableFileState.m; sourceTree = "<group>"; };
+		7F854157291F505400CCF09B /* UIImage+UFMCompress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIImage+UFMCompress.h"; path = "UnifiedForumModelParseImpl/Classes/UIImage+UFMCompress.h"; sourceTree = "<group>"; };
+		7F854158291F505400CCF09B /* UIImage+UFMCompress.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIImage+UFMCompress.m"; path = "UnifiedForumModelParseImpl/Classes/UIImage+UFMCompress.m"; sourceTree = "<group>"; };
 		7F8B7ABAE60AD0BB5A205CE813DBF601 /* PFMutableObjectState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFMutableObjectState.h; path = Parse/Parse/Internal/Object/State/PFMutableObjectState.h; sourceTree = "<group>"; };
+		7F90FBBA291D066400BA57D0 /* UFMConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UFMConstants.h; path = UnifiedForumModelParseImpl/Classes/UFMConstants.h; sourceTree = "<group>"; };
+		7F90FBBB291D066400BA57D0 /* UFMConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = UFMConstants.m; path = UnifiedForumModelParseImpl/Classes/UFMConstants.m; sourceTree = "<group>"; };
 		7FA017B38A4C1A1FB263C9FD57E813C8 /* PFRESTUserCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFRESTUserCommand.m; path = Parse/Parse/Internal/Commands/PFRESTUserCommand.m; sourceTree = "<group>"; };
 		800C359C61EE9AD0B5CE19532D3809BF /* PFRESTAnalyticsCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFRESTAnalyticsCommand.m; path = Parse/Parse/Internal/Commands/PFRESTAnalyticsCommand.m; sourceTree = "<group>"; };
 		804678A2A3A2CA33B1B6393726427A51 /* Bolts.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Bolts.modulemap; sourceTree = "<group>"; };
@@ -939,19 +947,19 @@
 		9A773168EB7EDAEF4A5924669FBBE910 /* PFJSONSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFJSONSerialization.m; path = Parse/Parse/Internal/PFJSONSerialization.m; sourceTree = "<group>"; };
 		9A889C6FC191E2C0811DE0D319A3C902 /* UFMObjectModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UFMObjectModel.h; path = UnifiedForumModelParseImpl/Classes/UFMObjectModel.h; sourceTree = "<group>"; };
 		9AA732C670DED1363EF986782881C2FF /* ParseManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ParseManager.m; path = Parse/Parse/Internal/ParseManager.m; sourceTree = "<group>"; };
-		9AF465478E59B703387BB6AAF1257939 /* UnifiedForumModelParseImpl.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = UnifiedForumModelParseImpl.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9AF465478E59B703387BB6AAF1257939 /* UnifiedForumModelParseImpl.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = UnifiedForumModelParseImpl.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9B22C13AD094117C51BE3E716F77D453 /* PFOfflineStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFOfflineStore.m; path = Parse/Parse/Internal/LocalDataStore/OfflineStore/PFOfflineStore.m; sourceTree = "<group>"; };
 		9B491E63B05D86967D0DC717E599EBBB /* Bolts.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Bolts.h; path = Bolts/Common/Bolts.h; sourceTree = "<group>"; };
 		9CBAA17EE759C9A9023906A0B9F5ED1A /* PFURLSessionUploadTaskDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFURLSessionUploadTaskDelegate.m; path = Parse/Parse/Internal/Commands/CommandRunner/URLSession/Session/TaskDelegate/PFURLSessionUploadTaskDelegate.m; sourceTree = "<group>"; };
 		9D284BEE33DB54C4E4AFF249A08342C1 /* PFConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFConfig.m; path = Parse/Parse/PFConfig.m; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E0CD86C6DE7FCCEB6E7F5C08857C2B2 /* UFPFShare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UFPFShare.h; path = UnifiedForumParseFramework/Classes/UFPFShare.h; sourceTree = "<group>"; };
 		9E2B5E8F4C5F7133A13575E4DDF6511A /* PFAnonymousUtils_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFAnonymousUtils_Private.h; path = Parse/Parse/Internal/User/AuthenticationProviders/Providers/Anonymous/PFAnonymousUtils_Private.h; sourceTree = "<group>"; };
 		9E5FBC89C2FA9C862DB9272BEA68B1CD /* PFURLSession_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFURLSession_Private.h; path = Parse/Parse/Internal/Commands/CommandRunner/URLSession/Session/PFURLSession_Private.h; sourceTree = "<group>"; };
 		9EC32D61617D3335B68C98246618CB68 /* PFPin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPin.h; path = Parse/Parse/Internal/LocalDataStore/Pin/PFPin.h; sourceTree = "<group>"; };
 		9F2633D31792A9D9BAB4AF011A9E6E48 /* PFURLSessionDataTaskDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFURLSessionDataTaskDelegate.m; path = Parse/Parse/Internal/Commands/CommandRunner/URLSession/Session/TaskDelegate/PFURLSessionDataTaskDelegate.m; sourceTree = "<group>"; };
 		9F26F9666965542B476F66A0E1B9207D /* Pods-UnifiedForumModelParseImpl_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-UnifiedForumModelParseImpl_Tests"; path = Pods_UnifiedForumModelParseImpl_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F2E663108F9A92B958893EE4A688464 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = Parse/Parse/Resources/en.lproj; sourceTree = "<group>"; };
+		9F2E663108F9A92B958893EE4A688464 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = en.lproj; path = Parse/Parse/Resources/en.lproj; sourceTree = "<group>"; };
 		9F4AED7B1559649446F624922CBCF9A6 /* PFObjectEstimatedData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFObjectEstimatedData.h; path = Parse/Parse/Internal/Object/EstimatedData/PFObjectEstimatedData.h; sourceTree = "<group>"; };
 		9F936DFB28A4A4FF17F1E3F230908294 /* PFHTTPRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFHTTPRequest.h; path = Parse/Parse/Internal/HTTPRequest/PFHTTPRequest.h; sourceTree = "<group>"; };
 		9FD61817960E234E310B1E5FFB57E604 /* PFDefaultACLController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFDefaultACLController.m; path = Parse/Parse/Internal/ACL/DefaultACLController/PFDefaultACLController.m; sourceTree = "<group>"; };
@@ -1167,7 +1175,7 @@
 		FEE22A76BBF1872B0D9562B4306217E6 /* Parse-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Parse-dummy.m"; sourceTree = "<group>"; };
 		FEE5822FA5287600311752C3CC170F66 /* PFMutableRelationState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFMutableRelationState.m; path = Parse/Parse/Internal/Relation/State/PFMutableRelationState.m; sourceTree = "<group>"; };
 		FF041AF06858B78A235D7F229BDC61DE /* UFPFService+User.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UFPFService+User.h"; path = "UnifiedForumParseFramework/Classes/UFPFService+User.h"; sourceTree = "<group>"; };
-		FF132FAD721C7606642ECB2463910E41 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		FF132FAD721C7606642ECB2463910E41 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1285,7 +1293,6 @@
 				60DAADEDAA9C366149A1453CB7688EE4 /* Core */,
 				C5C9BC991F8AB636263891642DEF3D8B /* Support Files */,
 			);
-			name = Parse;
 			path = Parse;
 			sourceTree = "<group>";
 		};
@@ -1305,7 +1312,6 @@
 				CBE82C3D321927F8801B6F34D36CEA60 /* Support Files */,
 				EB67F432039C398A11546B2BD4C637DA /* Tasks */,
 			);
-			name = Bolts;
 			path = Bolts;
 			sourceTree = "<group>";
 		};
@@ -1420,7 +1426,6 @@
 				E1F5F723480D61EC32AD57E3683C8E44 /* UFPFTopicReport.m */,
 				5E62EB62B477003CC0A5C793705C0CDC /* Support Files */,
 			);
-			name = UnifiedForumParseFramework;
 			path = UnifiedForumParseFramework;
 			sourceTree = "<group>";
 		};
@@ -1862,6 +1867,10 @@
 				4643F5EA6579A51962428FFDAAC99FC0 /* UFMTopicModel.m */,
 				AA10634755EED7FB1C48999D5F3715ED /* UFMUserModel.h */,
 				54359C808C2D5CE6AEBCDFA9FDB18F37 /* UFMUserModel.m */,
+				7F90FBBA291D066400BA57D0 /* UFMConstants.h */,
+				7F90FBBB291D066400BA57D0 /* UFMConstants.m */,
+				7F854157291F505400CCF09B /* UIImage+UFMCompress.h */,
+				7F854158291F505400CCF09B /* UIImage+UFMCompress.m */,
 				167CA7B2183A3A61F60A73828B94F377 /* Pod */,
 				7045FFD0E29871C224B7B1FAE8D877FB /* Support Files */,
 			);
@@ -1990,9 +1999,11 @@
 				58A6D5EE4BBDE1EC024874B563E64B9E /* UFMReplyModel.h in Headers */,
 				C43A99C01AF4C1C19AD0A8F6A7455F51 /* UFMService.h in Headers */,
 				A31E7A9F7AAEE3871644CA5A068891FD /* UFMService+UserModel.h in Headers */,
+				7F854159291F505400CCF09B /* UIImage+UFMCompress.h in Headers */,
 				A29C2A069FD6B8C777F8F9CA45045773 /* UFMTagModel.h in Headers */,
 				05467B672C678F7519D93E6ED03A7A2F /* UFMTopicModel.h in Headers */,
 				D20F5DDE22ED0EA3968784A9C3493B0A /* UFMUserModel.h in Headers */,
+				7F90FBBC291D066400BA57D0 /* UFMConstants.h in Headers */,
 				FD8F06992992CA8684F9CCF5F7D51E85 /* UnifiedForumModelParseImpl-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2789,6 +2800,8 @@
 				A9B7199B0AF50D1841BCB3C396BA6778 /* UFMService+UserModel.m in Sources */,
 				A5AF2CD693CD2BD0B9CA72D2D0E30ED0 /* UFMTagModel.m in Sources */,
 				C2FFDC0312EF3B22310764EC5789CAC7 /* UFMTopicModel.m in Sources */,
+				7F90FBBD291D066400BA57D0 /* UFMConstants.m in Sources */,
+				7F85415A291F505400CCF09B /* UIImage+UFMCompress.m in Sources */,
 				1F148523931A24023460002BCE030F34 /* UFMUserModel.m in Sources */,
 				26FBFB05A0A4A92AC5E37A0E9510A019 /* UnifiedForumModelParseImpl-dummy.m in Sources */,
 			);
@@ -3130,8 +3143,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

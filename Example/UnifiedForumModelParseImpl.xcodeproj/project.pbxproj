@@ -40,8 +40,8 @@
 		134192E38EE664B8EDDD33D1 /* Pods-UnifiedForumModelParseImpl_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnifiedForumModelParseImpl_Example.release.xcconfig"; path = "Target Support Files/Pods-UnifiedForumModelParseImpl_Example/Pods-UnifiedForumModelParseImpl_Example.release.xcconfig"; sourceTree = "<group>"; };
 		15736E035024D1A21DB15ABD /* Pods-UnifiedForumModelParseImpl_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnifiedForumModelParseImpl_Tests.debug.xcconfig"; path = "Target Support Files/Pods-UnifiedForumModelParseImpl_Tests/Pods-UnifiedForumModelParseImpl_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		1661F936B6F870519D4A6B76 /* Pods_UnifiedForumModelParseImpl_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnifiedForumModelParseImpl_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		166D6345C5EBC86710DB2550 /* UnifiedForumModelParseImpl.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = UnifiedForumModelParseImpl.podspec; path = ../UnifiedForumModelParseImpl.podspec; sourceTree = "<group>"; };
-		26F978A5C378044346CBA972 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		166D6345C5EBC86710DB2550 /* UnifiedForumModelParseImpl.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = UnifiedForumModelParseImpl.podspec; path = ../UnifiedForumModelParseImpl.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		26F978A5C378044346CBA972 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		3422A69A0F32C91E95C4482F /* Pods_UnifiedForumModelParseImpl_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnifiedForumModelParseImpl_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* UnifiedForumModelParseImpl_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnifiedForumModelParseImpl_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -64,7 +64,7 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8D2846B4176723B407C4051E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		8D2846B4176723B407C4051E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		C994577651346B6EDF9EBBC4 /* Pods-UnifiedForumModelParseImpl_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnifiedForumModelParseImpl_Example.debug.xcconfig"; path = "Target Support Files/Pods-UnifiedForumModelParseImpl_Example/Pods-UnifiedForumModelParseImpl_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		FB9B0566FA43ADC1E4C93BB3 /* Pods-UnifiedForumModelParseImpl_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnifiedForumModelParseImpl_Tests.release.xcconfig"; path = "Target Support Files/Pods-UnifiedForumModelParseImpl_Tests/Pods-UnifiedForumModelParseImpl_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,7 +103,6 @@
 				15736E035024D1A21DB15ABD /* Pods-UnifiedForumModelParseImpl_Tests.debug.xcconfig */,
 				FB9B0566FA43ADC1E4C93BB3 /* Pods-UnifiedForumModelParseImpl_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -258,6 +257,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

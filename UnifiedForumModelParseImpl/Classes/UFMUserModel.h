@@ -61,6 +61,10 @@ NS_ASSUME_NONNULL_BEGIN
 // 是否匿名用户
 @property (nonatomic, assign) BOOL isAnonymousUser;
 
+- (BOOL)isEqualToUserModel:(UFMUserModel *)userModel;
+
+- (BOOL)isFollowedByUserModel:(UFMUserModel *)userModel;
+
 @end
 
 NS_ASSUME_NONNULL_END
