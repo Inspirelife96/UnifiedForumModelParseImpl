@@ -4,10 +4,10 @@ PODS:
     - Parse/Core (= 1.19.4)
   - Parse/Core (1.19.4):
     - Bolts/Tasks (= 1.9.1)
-  - UnifiedForumModelParseImpl (0.1.0):
+  - UnifiedForumModelParseImpl (0.2.0):
     - Parse
     - UnifiedForumParseFramework
-  - UnifiedForumParseFramework (0.2.0):
+  - UnifiedForumParseFramework (0.3.0):
     - Parse
 
 DEPENDENCIES:
@@ -26,8 +26,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Bolts: 8c1e8aab2f603387b8b9924f57d1d64f43d3ffdc
   Parse: 6d572042e2c171414c677acabcd9bab7bbf51264
-  UnifiedForumModelParseImpl: 9d1683a272ff3137eae79dfae3523949d5080de9
-  UnifiedForumParseFramework: 7838eb202fd685c2fb3e941e96649047f1bc475e
+  UnifiedForumModelParseImpl: 1d8a55e812634f02c952b4accb15cf397adc1450
+  UnifiedForumParseFramework: a4fdc73ae2d5adb058c6a388b54fde989f0ac27f
 
 PODFILE CHECKSUM: 849ba3a3b86acfccfffc3b890693b756d6e6352e
 

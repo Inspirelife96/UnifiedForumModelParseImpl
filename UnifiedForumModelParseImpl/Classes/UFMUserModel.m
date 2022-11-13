@@ -80,4 +80,56 @@
     return [UFPFService isFollowFromUser:fromUser toUser:toUser error:&error];
 }
 
+- (void)upgradeBio:(NSString * __nullable)bio avatarImage:(UIImage * __nullable)avatarImage backgroundImage:(UIImage * __nullable)backgroundImage error:(NSError **)error {
+    PFUser *currentUser = (PFUser *)self.metaData;
+    
+    if (bio) {
+        [currentUser setObject:bio forKey:UFPFUserKeyBio];
+    }
+    
+    UFMFileModel *newAvatarModel = nil;
+    UFMFileModel *newBackgroundImageModel = nil;
+
+    if (avatarImage) {
+        NSData *avatarImageData = UIImageJPEGRepresentation(avatarImage, 1.0);
+        UFMFileModel *avatarModel = [[UFMFileModel alloc] initWithFileData:avatarImageData fileType:UFMFileTypeImageJPEG error:error];
+        if (*error) {
+            return;
+        } else {
+            newAvatarModel = avatarModel;
+            [currentUser setObject:avatarModel.metaData forKey:UFPFUserKeyAvatar];
+        }
+    }
+    
+    if (backgroundImage) {
+        NSData *backgroudImage = UIImageJPEGRepresentation(backgroundImage, 1.0);
+        UFMFileModel *backgroundImageModel = [[UFMFileModel alloc] initWithFileData:backgroudImage fileType:UFMFileTypeImageJPEG error:error];
+        if (*error) {
+            return;
+        } else {
+            newBackgroundImageModel = backgroundImageModel;
+            [currentUser setObject:backgroundImageModel.metaData forKey:UFPFUserKeyAvatar];
+        }
+    }
+    
+    [currentUser save:error];
+    
+    if (*error) {
+        return;
+    } else {
+        if (bio) {
+            self.bio = bio;
+        }
+        
+        if (newAvatarModel) {
+            self.avatarModel = newAvatarModel;
+        }
+        
+        if (newBackgroundImageModel) {
+            self.backgroundImageModel = newBackgroundImageModel;
+        }
+    }
+    
+}
+
 @end

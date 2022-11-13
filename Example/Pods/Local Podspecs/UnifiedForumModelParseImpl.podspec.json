@@ -1,6 +1,6 @@
 {
   "name": "UnifiedForumModelParseImpl",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "summary": "A short description of UnifiedForumModelParseImpl.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/Inspirelife96/UnifiedForumModelParseImpl.git",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/Inspirelife96/UnifiedForumModelParseImpl.git",
-    "tag": "0.1.0"
+    "tag": "0.2.0"
   },
   "platforms": {
     "ios": "10.0"

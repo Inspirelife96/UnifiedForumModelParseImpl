@@ -65,6 +65,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (BOOL)isFollowedByUserModel:(UFMUserModel *)userModel;
 
+- (void)upgradeBio:(NSString * __nullable)bio avatarImage:(UIImage * __nullable)avatarImage backgroundImage:(UIImage * __nullable)backgroundImage error:(NSError **)error;
+
 @end
 
 NS_ASSUME_NONNULL_END
