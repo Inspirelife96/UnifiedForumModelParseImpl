@@ -15,7 +15,7 @@
 @implementation UFMTopicModel
 
 - (instancetype)initWithMetaData:(id)metaData error:(NSError **)error {
-    if (self = [super init]) {
+    if (self = [super initWithMetaData:metaData error:error]) {
         // 如果是metaData是UFPFTopic类型的，可以进行如下的转换
         if ([metaData isKindOfClass:[UFPFTopic class]]) {
             UFPFTopic *topic = (UFPFTopic *)metaData;
@@ -96,6 +96,13 @@
         UFPFTopic *topic = (UFPFTopic *)self.metaData;
         [self _saveTopic:topic error:error];
     }
+}
+
+- (BOOL)isLikedByUserModel:(UFMUserModel *)userModel error:(NSError **)error {
+    UFPFTopic *topic = (UFPFTopic *)self.metaData;
+    PFUser *user = (PFUser *)userModel.metaData;
+    
+    return [UFPFService isTopic:topic likedbyUser:user error:error];
 }
 
 - (void)_saveTopic:(UFPFTopic *)topic error:(NSError **)error {

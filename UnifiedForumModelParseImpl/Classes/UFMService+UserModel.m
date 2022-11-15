@@ -57,6 +57,7 @@ static UFMUserModel *currentUserModel_ = nil;
     
     if ([PFUser currentUser] && !*error) {
         currentUserModel_.username = userName;
+        currentUserModel_.isAnonymousUser = NO;
     }
 }
 
