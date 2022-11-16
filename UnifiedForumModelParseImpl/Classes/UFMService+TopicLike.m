@@ -1,11 +1,11 @@
 //
-//  UFMService+TopicLikeModel.m
+//  UFMService+TopicModelLike.m
 //  UnifiedForumModelParseImpl
 //
 //  Created by XueFeng Chen on 2022/11/15.
 //
 
-#import "UFMService+TopicLikeModel.h"
+#import "UFMService+TopicLike.h"
 
 #import "UFMUserModel.h"
 #import "UFMTopicModel.h"

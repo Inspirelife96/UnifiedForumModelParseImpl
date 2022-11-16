@@ -1,5 +1,5 @@
 //
-//  UFMService+TopicShareModel.h
+//  UFMService+TopicModelShare.h
 //  UnifiedForumModelParseImpl
 //
 //  Created by XueFeng Chen on 2022/11/15.

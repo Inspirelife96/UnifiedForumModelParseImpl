@@ -50,7 +50,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL isDeleted;
 
 // 头像
-@property (nonatomic, strong, nullable) UFMFileModel *avatarModel;
+@property (nonatomic, strong, nullable) UFMFileModel *avatarImageModel;
 
 // 背景
 @property (nonatomic, strong, nullable) UFMFileModel *backgroundImageModel;

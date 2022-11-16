@@ -7,14 +7,14 @@
 
 #import "UFMObjectModel.h"
 
-extern NSString *const _Nonnull UFMFileTypeTextPlain;
-extern NSString *const _Nonnull UFMFileTypeTextHTML;
-extern NSString *const _Nonnull UFMFileTypeTextMarkDown;
-extern NSString *const _Nonnull UFMFileTypeImagePNG;
-extern NSString *const _Nonnull UFMFileTypeImageJPEG;
-extern NSString *const _Nonnull UFMFileTypeImageGIF;
-extern NSString *const _Nonnull UFMFileTypeVideoMPEG;
-extern NSString *const _Nonnull UFMFileTypeApplicationPDF;
+extern NSString *const _Nonnull UFMFileModelTypeTextPlain;
+extern NSString *const _Nonnull UFMFileModelTypeTextHTML;
+extern NSString *const _Nonnull UFMFileModelTypeTextMarkDown;
+extern NSString *const _Nonnull UFMFileModelTypeImagePNG;
+extern NSString *const _Nonnull UFMFileModelTypeImageJPEG;
+extern NSString *const _Nonnull UFMFileModelTypeImageGIF;
+extern NSString *const _Nonnull UFMFileModelTypeVideoMPEG;
+extern NSString *const _Nonnull UFMFileModelTypeApplicationPDF;
 
 NS_ASSUME_NONNULL_BEGIN
 

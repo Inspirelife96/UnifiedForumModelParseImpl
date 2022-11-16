@@ -23,7 +23,7 @@
             self.topicId = topic.objectId;
             self.title = topic.title;
             self.content = topic.content;
-            self.mediaFileModelArray = [self _generateFileModelArrayFromFileObjectArray:topic.mediaFileObjects];
+            self.fileModelArray = [self _generateFileModelArrayFromFileObjectArray:topic.mediaFileObjects];
             
             PFUser *fromUser = topic.fromUser;
             [fromUser fetchIfNeeded:error];
@@ -55,17 +55,17 @@
 
 - (instancetype)initWithTitle:(NSString *)title
                       content:(NSString *)content
-          mediaFileModelArray:(NSArray<UFMFileModel *> * _Nullable)mediaFileModelArray
-                mediaFileType:(NSString *)mediaFileType
+               fileModelArray:(NSArray<UFMFileModel *> * _Nullable)fileModelArray
+                     fileType:(NSString *)fileType
                 fromUserModel:(UFMUserModel *)fromUserModel
                      category:(NSString * _Nullable)category
                          tags:(NSArray<NSString *> * _Nullable)tags
-                        error:(NSError **)error {
+                        error:(NSError **)error; {
     if (self = [super init]) {
         self.title = title;
         self.content = content;
-        self.mediaFileModelArray = mediaFileModelArray;
-        self.mediaFileType = mediaFileType;
+        self.fileModelArray = fileModelArray;
+        self.fileType = fileType;
         self.fromUserModel = fromUserModel;
         self.category = category;
         self.tags = tags;
@@ -98,7 +98,7 @@
     }
 }
 
-- (BOOL)isLikedByUserModel:(UFMUserModel *)userModel error:(NSError **)error {
+- (BOOL)isLikedByUser:(UFMUserModel *)userModel error:(NSError **)error {
     UFPFTopic *topic = (UFPFTopic *)self.metaData;
     PFUser *user = (PFUser *)userModel.metaData;
     
@@ -108,10 +108,10 @@
 - (void)_saveTopic:(UFPFTopic *)topic error:(NSError **)error {
     topic.title = self.title;
     topic.content = self.content;
-    if (self.mediaFileModelArray) {
-        topic.mediaFileObjects = [self _generateFileObjectArrayFromFileModelArray:self.mediaFileModelArray];
+    if (self.fileModelArray) {
+        topic.mediaFileObjects = [self _generateFileObjectArrayFromFileModelArray:self.fileModelArray];
     }
-    topic.mediaFileType = self.mediaFileType;
+    topic.mediaFileType = self.fileType;
     topic.fromUser = (PFUser *)self.fromUserModel.metaData;
     topic.category = self.category;
     topic.tags = self.tags;
@@ -141,8 +141,8 @@
 - (NSArray<UFMFileModel *> *)_generateFileModelArrayFromFileObjectArray:(NSArray *)fileObjectArray {
     NSMutableArray *fileModelMutableArray = [[NSMutableArray alloc] init];
     [fileObjectArray enumerateObjectsUsingBlock:^(NSObject * _Nonnull fileObject, NSUInteger idx, BOOL * _Nonnull stop) {
-        UFMFileModel *fileObjectModel = [[UFMFileModel alloc] initWithMetaData:fileObject error:nil];
-        [fileModelMutableArray addObject:fileObjectModel];
+        UFMFileModel *fileModel = [[UFMFileModel alloc] initWithMetaData:fileObject error:nil];
+        [fileModelMutableArray addObject:fileModel];
     }];
     
     return [fileModelMutableArray copy];

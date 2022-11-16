@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *content;
 
 // post可以有附加内容
-@property (nonatomic, strong) NSArray<UFMFileModel *> *fileObjectModelArray;
+@property (nonatomic, strong) NSArray<UFMFileModel *> *fileModelArray;
 
 // 针对post的部分回复，用于展示，上限5条
 @property (nonatomic, strong) NSArray<UFMReplyModel *> *replyModelArray;

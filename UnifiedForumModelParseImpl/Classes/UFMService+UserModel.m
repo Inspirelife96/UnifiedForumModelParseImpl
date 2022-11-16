@@ -11,7 +11,7 @@
 
 static UFMUserModel *currentUserModel_ = nil;
 
-@implementation UFMService (UserModel)
+@implementation UFMService (User)
 
 + (UFMUserModel *)currentUserModel {
     if (![PFUser currentUser]) {

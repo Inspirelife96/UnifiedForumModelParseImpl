@@ -5,14 +5,14 @@
 //  Created by XueFeng Chen on 2022/10/22.
 //
 
-#import "UFMObjectModel.h"
+#import "UFMObject.h"
 
-@class UFMFileModel;
-@class UFMUserModel;
+@class UFMFile;
+@class UFMUser;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UFMTopicModel : UFMObjectModel
+@interface UFMTopicModel : UFMObject
 
 // ID
 @property (nonatomic, copy) NSString *topicId;
@@ -24,13 +24,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *content;
 
 // 附加内容
-@property (nonatomic, copy) NSArray<UFMFileModel *> *fileModelArray;
+@property (nonatomic, copy) NSArray<UFMFile *> *mediaFileModelArray;
 
 // 附加内容的类型
-@property (nonatomic, copy) NSString *fileType;
+@property (nonatomic, copy) NSString *mediaFileType;
 
 // 发布者信息
-@property (nonatomic, strong) UFMUserModel *fromUserModel;
+@property (nonatomic, strong) UFMUser *fromUser;
 
 // 评论数
 @property (nonatomic, assign) NSInteger postCount;
@@ -67,16 +67,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithTitle:(NSString *)title
                       content:(NSString *)content
-               fileModelArray:(NSArray<UFMFileModel *> * _Nullable)fileModelArray
-                     fileType:(NSString *)fileType
-                fromUserModel:(UFMUserModel *)fromUserModel
+          mediaFileModelArray:(NSArray<UFMFile *> * _Nullable)mediaFileModelArray
+                mediaFileType:(NSString *)mediaFileType
+                fromUser:(UFMUser *)fromUser
                      category:(NSString * _Nullable)category
                          tags:(NSArray<NSString *> * _Nullable)tags
                         error:(NSError **)error;
 
 - (void)save:(NSError **)error;
 
-- (BOOL)isLikedByUser:(UFMUserModel *)userModel error:(NSError **)error;
+- (BOOL)isLikedByUser:(UFMUser *)user error:(NSError **)error;
 
 @end
 

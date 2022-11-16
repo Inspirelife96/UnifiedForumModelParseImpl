@@ -18,9 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)initializeWithConfiguration:(NSDictionary *)configuration;
 
-+ (UFMAppInfoModel *)currentAppInfo;
-
-+ (UFMUserModel *)currentUser;
 
 @end
 

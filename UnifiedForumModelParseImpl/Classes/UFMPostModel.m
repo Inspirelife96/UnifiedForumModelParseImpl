@@ -24,12 +24,12 @@
             
             self.content = post.content;
             
-            NSMutableArray *fileObjectModelMutableArray = [[NSMutableArray alloc] init];
+            NSMutableArray *fileModelMutableArray = [[NSMutableArray alloc] init];
             [post.mediaFileObjects enumerateObjectsUsingBlock:^(PFFileObject * _Nonnull fileObject, NSUInteger idx, BOOL * _Nonnull stop) {
-                UFMFileModel *fileObjectModel = [[UFMFileModel alloc] initWithMetaData:fileObject error:nil];
-                [fileObjectModelMutableArray addObject:fileObjectModel];
+                UFMFileModel *fileModel = [[UFMFileModel alloc] initWithMetaData:fileObject error:nil];
+                [fileModelMutableArray addObject:fileModel];
             }];
-            self.fileObjectModelArray = [fileObjectModelMutableArray copy];
+            self.fileModelArray = [fileModelMutableArray copy];
             
             NSMutableArray *replyModelMutableArray = [[NSMutableArray alloc] init];
             NSArray *replies = post.replies;

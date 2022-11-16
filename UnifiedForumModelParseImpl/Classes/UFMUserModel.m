@@ -41,11 +41,11 @@
 
         self.isDeleted = [[user objectForKey:UFPFUserKeyIsDeleted] boolValue];
 
-        PFFileObject *avatarFileObject = [user objectForKey:UFPFUserKeyAvatar];
-        if (avatarFileObject) {
-            self.avatarModel = [[UFMFileModel alloc] initWithMetaData:avatarFileObject error:nil];
+        PFFileObject *avatarImageFileObject = [user objectForKey:UFPFUserKeyAvatar];
+        if (avatarImageFileObject) {
+            self.avatarImageModel = [[UFMFileModel alloc] initWithMetaData:avatarImageFileObject error:nil];
         } else {
-            self.avatarModel = nil;
+            self.avatarImageModel = nil;
         }
         
         PFFileObject *backgroundImageFileObject = [user objectForKey:UFPFUserKeyBackgroundImage];
@@ -87,23 +87,23 @@
         [currentUser setObject:bio forKey:UFPFUserKeyBio];
     }
     
-    UFMFileModel *newAvatarModel = nil;
+    UFMFileModel *newAvatarImageModel = nil;
     UFMFileModel *newBackgroundImageModel = nil;
 
     if (avatarImage) {
         NSData *avatarImageData = UIImageJPEGRepresentation(avatarImage, 1.0);
-        UFMFileModel *avatarModel = [[UFMFileModel alloc] initWithFileData:avatarImageData fileType:UFMFileTypeImageJPEG error:error];
+        UFMFileModel *avatarImageModel = [[UFMFileModel alloc] initWithFileData:avatarImageData fileType:UFMFileModelTypeImageJPEG error:error];
         if (*error) {
             return;
         } else {
-            newAvatarModel = avatarModel;
-            [currentUser setObject:avatarModel.metaData forKey:UFPFUserKeyAvatar];
+            newAvatarImageModel = avatarImageModel;
+            [currentUser setObject:newAvatarImageModel.metaData forKey:UFPFUserKeyAvatar];
         }
     }
     
     if (backgroundImage) {
         NSData *backgroudImage = UIImageJPEGRepresentation(backgroundImage, 1.0);
-        UFMFileModel *backgroundImageModel = [[UFMFileModel alloc] initWithFileData:backgroudImage fileType:UFMFileTypeImageJPEG error:error];
+        UFMFileModel *backgroundImageModel = [[UFMFileModel alloc] initWithFileData:backgroudImage fileType:UFMFileModelTypeImageJPEG error:error];
         if (*error) {
             return;
         } else {
@@ -121,8 +121,8 @@
             self.bio = bio;
         }
         
-        if (newAvatarModel) {
-            self.avatarModel = newAvatarModel;
+        if (newAvatarImageModel) {
+            self.avatarImageModel = newAvatarImageModel;
         }
         
         if (newBackgroundImageModel) {

@@ -1,24 +1,24 @@
 //
-//  UFMFileModel.m
+//  UFMFile.m
 //  UFMParseImpl
 //
 //  Created by XueFeng Chen on 2022/11/8.
 //
 
-#import "UFMFileModel.h"
+#import "UFMFile.h"
 
 #import "UIImage+UFMCompress.h"
 
-NSString *const _Nonnull UFMFileModelTypeTextPlain = @"txt";
-NSString *const _Nonnull UFMFileModelTypeTextHTML = @"html";
-NSString *const _Nonnull UFMFileModelTypeTextMarkDown = @"md";
-NSString *const _Nonnull UFMFileModelTypeImagePNG = @"png";
-NSString *const _Nonnull UFMFileModelTypeImageJPEG = @"jpeg";
-NSString *const _Nonnull UFMFileModelTypeImageGIF = @"gif";
-NSString *const _Nonnull UFMFileModelTypeVideoMPEG = @"mpeg";
-NSString *const _Nonnull UFMFileModelTypeApplicationPDF = @"pdf";
+NSString *const _Nonnull UFMFileTypeTextPlain = @"txt";
+NSString *const _Nonnull UFMFileTypeTextHTML = @"html";
+NSString *const _Nonnull UFMFileTypeTextMarkDown = @"md";
+NSString *const _Nonnull UFMFileTypeImagePNG = @"png";
+NSString *const _Nonnull UFMFileTypeImageJPEG = @"jpeg";
+NSString *const _Nonnull UFMFileTypeImageGIF = @"gif";
+NSString *const _Nonnull UFMFileTypeVideoMPEG = @"mpeg";
+NSString *const _Nonnull UFMFileTypeApplicationPDF = @"pdf";
 
-@implementation UFMFileModel
+@implementation UFMFile
 
 - (instancetype)initWithMetaData:(id)metaData error:(NSError **)error {
     if (self = [super initWithMetaData:metaData error:error]) {
@@ -41,9 +41,9 @@ NSString *const _Nonnull UFMFileModelTypeApplicationPDF = @"pdf";
             
             self.fileType = fileType;
             
-            if ([fileType isEqualToString:UFMFileModelTypeImagePNG] ||
-                [fileType isEqualToString:UFMFileModelTypeImageJPEG] ||
-                [fileType isEqualToString:UFMFileModelTypeImageGIF]) {
+            if ([fileType isEqualToString:UFMFileTypeImagePNG] ||
+                [fileType isEqualToString:UFMFileTypeImageJPEG] ||
+                [fileType isEqualToString:UFMFileTypeImageGIF]) {
                 // 图片文件则判断是否有预存的宽和高，否则默认200/200
                 NSArray *sizeArray = [fileName componentsSeparatedByString:@"_"];
                 if (sizeArray.count == 3) {
@@ -65,9 +65,9 @@ NSString *const _Nonnull UFMFileModelTypeApplicationPDF = @"pdf";
         self.fileType = fileType;
         NSData *data = fileData;
         
-        if ([fileType isEqualToString:UFMFileModelTypeImagePNG] ||
-            [fileType isEqualToString:UFMFileModelTypeImageJPEG] ||
-            [fileType isEqualToString:UFMFileModelTypeImageGIF]) {
+        if ([fileType isEqualToString:UFMFileTypeImagePNG] ||
+            [fileType isEqualToString:UFMFileTypeImageJPEG] ||
+            [fileType isEqualToString:UFMFileTypeImageGIF]) {
             UIImage *image = [UIImage imageWithData:fileData];
             data = [image ufm_compressToByte:200 * 1024];
             image = [UIImage imageWithData:data];

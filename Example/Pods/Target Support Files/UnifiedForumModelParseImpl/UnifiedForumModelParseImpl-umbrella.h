@@ -11,17 +11,17 @@
 #endif
 
 #import "UFMAppInfoModel.h"
-#import "UFMCategoryModel.h"
+#import "UFMCategory.h"
 #import "UFMConstants.h"
-#import "UFMFileModel.h"
-#import "UFMObjectModel.h"
-#import "UFMPostModel.h"
+#import "UFMFile.h"
+#import "UFMObject.h"
+#import "UFMPost.h"
 #import "UFMReplyModel.h"
-#import "UFMService+UserModel.h"
+#import "UFMService+User.h"
 #import "UFMService.h"
 #import "UFMTagModel.h"
 #import "UFMTopicModel.h"
-#import "UFMUserModel.h"
+#import "UFMUser.h"
 #import "UIImage+UFMCompress.h"
 
 FOUNDATION_EXPORT double UnifiedForumModelParseImplVersionNumber;

@@ -11,14 +11,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UFMService (UserModel)
+@interface UFMService (User)
 
 + (UFMUserModel *)currentUserModel;
 
 /**
  using user name and password login.
  
- @note No return value, use error to check whether login succeeded or not. Call [UFMService currentUserModel] to get userModel if login succeeded.
+ @note No return value, use error to check whether login succeeded or not. Call [UFMService currentUser] to get user if login succeeded.
 
  @param userName login user name
  @param password login password

@@ -1,11 +1,11 @@
 //
-//  UFMService+TopicShareModel.m
+//  UFMService+TopicModelShare.m
 //  UnifiedForumModelParseImpl
 //
 //  Created by XueFeng Chen on 2022/11/15.
 //
 
-#import "UFMService+TopicShareModel.h"
+#import "UFMService+TopicShare.h"
 
 #import "UFMUserModel.h"
 #import "UFMTopicModel.h"
