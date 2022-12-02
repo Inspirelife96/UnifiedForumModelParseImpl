@@ -12,11 +12,15 @@
 
 @implementation UFMService (TopicShareModel)
 
-+ (BOOL)userModel:(UFMUserModel *)userModel shareTopicModel:(UFMTopicModel *)topicModel toPlatform:(NSString *)toPlatform error:(NSError **)error {
++ (void)userModel:(UFMUserModel *)userModel shareTopicModel:(UFMTopicModel *)topicModel toPlatform:(NSString *)toPlatform error:(NSError **)error {
     PFUser *fromUser = (PFUser *)userModel.metaData;
     UFPFTopic *topic = (UFPFTopic *)topicModel.metaData;
     
-    return [UFPFService addShareTopic:topic fromUser:fromUser toPlatform:toPlatform error:error];
+    [UFPFService addShareTopic:topic fromUser:fromUser toPlatform:toPlatform error:error];
+    
+    if (!*error) {
+        topicModel.shareCount++;
+    }
 }
 
 @end

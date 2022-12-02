@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UFMService (TopicShareModel)
 
-+ (BOOL)userModel:(UFMUserModel *)userModel shareTopicModel:(UFMTopicModel *)topicModel toPlatform:(NSString *)toPlatform error:(NSError **)error;
++ (void)userModel:(UFMUserModel *)userModel shareTopicModel:(UFMTopicModel *)topicModel toPlatform:(NSString *)toPlatform error:(NSError **)error;
 
 @end
 

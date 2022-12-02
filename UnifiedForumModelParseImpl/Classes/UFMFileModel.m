@@ -32,6 +32,8 @@ NSString *const _Nonnull UFMFileModelTypeApplicationPDF = @"pdf";
 
         // init
         self.fileType = @"";
+        self.imageWidth = 200.0f;
+        self.imageHeight = 200.0f;
         
         // 先判断后缀，决定文件类型
         NSArray *array = [self.name componentsSeparatedByString:@"."];

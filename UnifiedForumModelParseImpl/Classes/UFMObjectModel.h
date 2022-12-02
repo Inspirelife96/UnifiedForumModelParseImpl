@@ -7,6 +7,9 @@
 
 #import <Foundation/Foundation.h>
 
+@class UFMReplyModel;
+@class UFMFileModel;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UFMObjectModel : NSObject
@@ -16,6 +19,14 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)init;
 - (instancetype)initWithMetaData:(id)metaData error:(NSError **)error NS_DESIGNATED_INITIALIZER;
 - (instancetype)initWithMetaData:(id)metaData;
+
++ (NSArray *)generateFileObjectArrayFromFileModelArray:(NSArray<UFMFileModel *> *)fileModelArray;
+
++ (NSArray<UFMFileModel *> *)generateFileModelArrayFromFileObjectArray:(NSArray *)fileObjectArray;
+
++ (NSArray *)generateReplyArrayFromReplyModelArray:(NSArray<UFMReplyModel *> *)replyModelArray;
+
+
 
 @end
 
