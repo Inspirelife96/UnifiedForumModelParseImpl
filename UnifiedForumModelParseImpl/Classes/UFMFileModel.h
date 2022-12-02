@@ -38,6 +38,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithFileData:(NSData *)fileData fileType:(NSString *)fileType error:(NSError **)error;
 
+- (instancetype)initWithImage:(UIImage *)image error:(NSError **)error;
+
 @end
 
 NS_ASSUME_NONNULL_END

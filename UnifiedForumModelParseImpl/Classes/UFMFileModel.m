@@ -94,4 +94,28 @@ NSString *const _Nonnull UFMFileModelTypeApplicationPDF = @"pdf";
     return self;
 }
 
+- (instancetype)initWithImage:(UIImage *)image error:(NSError **)error {
+    if (self = [super init])  {
+        NSData *data = [image ufm_compressToByte:200 * 1024];
+        UIImage *compressedImage = [UIImage imageWithData:data];
+        self.imageWidth = compressedImage.size.width;
+        self.imageHeight = compressedImage.size.height;
+        self.fileType = UFMFileModelTypeImageJPEG;
+        self.name = [NSString stringWithFormat:@"file_%.2f_%.2f.%@", self.imageWidth, self.imageHeight, self.fileType];
+
+        PFFileObject *fileObject = [PFFileObject fileObjectWithName:self.name data:data contentType:@"" error:error];
+        
+        if (*error) {
+            return nil;
+        } else {
+            self.metaData = fileObject;
+            self.url = fileObject.url;
+            self.dirty = fileObject.isDirty;
+        }
+    }
+
+    return self;
+}
+
+
 @end
