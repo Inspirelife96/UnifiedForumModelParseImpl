@@ -98,7 +98,7 @@
     }
 }
 
-- (BOOL)isLikedByUser:(UFMUserModel *)userModel error:(NSError **)error {
+- (BOOL)isLikedByUserModel:(UFMUserModel *)userModel error:(NSError **)error {
     UFPFTopic *topic = (UFPFTopic *)self.metaData;
     PFUser *user = (PFUser *)userModel.metaData;
     

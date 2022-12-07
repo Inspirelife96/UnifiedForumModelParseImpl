@@ -8,6 +8,8 @@
 #import "UFMReplyModel.h"
 
 #import "UFMUserModel.h"
+#import "UFMPostModel.h"
+#import "UFMReplyModel.h"
 
 @implementation UFMReplyModel
 
@@ -56,6 +58,59 @@
     }
     
     return self;
+}
+
+- (instancetype)initWithContent:(NSString *)content
+                  fromUserModel:(UFMUserModel *)fromUserModel
+                    toPostModel:(UFMPostModel *)toPostModel
+                   toReplyModel:(UFMReplyModel *)toReplyModel
+                          error:(NSError **)error {
+    if (self = [super init]) {
+        self.content = content;
+        
+        self.toPostId = toPostModel.postId;
+        self.toUserModel = toPostModel.fromUserModel;
+        if (toReplyModel) {
+            self.toReplyId = toReplyModel.replyId;
+            self.toUserModel = toReplyModel.fromUserModel;
+        } else {
+            self.toReplyId = nil;
+        }
+
+        self.fromUserModel = fromUserModel;
+
+        self.isDeleted = NO;
+        self.isApproved = YES;
+                
+        UFPFReply *reply = [[UFPFReply alloc] init];
+        reply.content = content;
+        reply.fromUser = (PFUser *)fromUserModel.metaData;
+        reply.toPost = (UFPFPost *)toPostModel.metaData;
+        if (toReplyModel) {
+            reply.toReply = (UFPFReply *)toReplyModel.metaData;
+        }
+        reply.isDeleted = NO;
+        reply.isApproved = YES;
+        
+        [reply save:error];
+
+        if (!*error) {
+            self.metaData = reply;
+            self.replyId = reply.objectId;
+            self.createdAt = reply.createdAt;
+        } else {
+            return nil;
+        }
+    }
+    
+    return self;
+}
+
+- (void)save:(NSError **)error {
+    if ([self.metaData isKindOfClass:[UFPFReply class]]) {
+        UFPFReply *reply = (UFPFReply *)self.metaData;
+        [reply save:error];
+    }
 }
 
 @end

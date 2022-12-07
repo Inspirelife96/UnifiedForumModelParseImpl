@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) id metaData; // 原始数据，类型不确定
 
 - (instancetype)init;
-- (instancetype)initWithMetaData:(id)metaData error:(NSError **)error NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithMetaData:(id)metaData error:(NSError **)error;
 - (instancetype)initWithMetaData:(id)metaData;
 
 + (NSArray *)generateFileObjectArrayFromFileModelArray:(NSArray<UFMFileModel *> *)fileModelArray;

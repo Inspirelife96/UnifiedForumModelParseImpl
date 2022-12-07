@@ -12,9 +12,9 @@
 
 @implementation UFMObjectModel
 
-- (instancetype)init {
-    return [self initWithMetaData:@{}];
-}
+//- (instancetype)init {
+//    return [self initWithMetaData:@{}];
+//}
 
 - (instancetype)initWithMetaData:(id)metaData {
     NSError *error = nil;

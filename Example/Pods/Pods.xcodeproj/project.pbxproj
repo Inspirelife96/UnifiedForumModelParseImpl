@@ -266,6 +266,8 @@
 		7BC53763C98C71B3DD5DD9D5B66BB882 /* PFUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 37345290A6C0F4BB1027493DDA9150D1 /* PFUser.m */; };
 		7C2BB2456996735563F2222E0C1598A2 /* PFFilePersistenceGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = D825213D78EF5964D70A53AC515AAA8F /* PFFilePersistenceGroup.m */; };
 		7EBFC2E27C5B69A50CDD500C7C2B23E5 /* PFRESTUserCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = A8F952C380E2487FC52659C966AC79FC /* PFRESTUserCommand.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		7F13237E293DAB060066EE8C /* UFMService+PostLike.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F13237C293DAB060066EE8C /* UFMService+PostLike.h */; };
+		7F13237F293DAB060066EE8C /* UFMService+PostLike.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F13237D293DAB060066EE8C /* UFMService+PostLike.m */; };
 		7F3F5CB81EEFC6D30DDCEDD97266A193 /* PFCachedQueryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DDE361C5E9077F86F0D5F152618ACC /* PFCachedQueryController.m */; };
 		8015E48CE4660F9021A8E4E15854EB79 /* PFObject+Deprecated.h in Headers */ = {isa = PBXBuildFile; fileRef = B88A1C044AD8230AB68EDB7FE1217A29 /* PFObject+Deprecated.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8024834D3BF011FAF94A470CE2535068 /* UFMObjectModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5095798D32FE76736AD85A2284648967 /* UFMObjectModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -904,6 +906,8 @@
 		7D8EDF49F0F096128BF07AA741F92279 /* PFSQLiteDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFSQLiteDatabase.h; path = Parse/Parse/Internal/LocalDataStore/SQLite/PFSQLiteDatabase.h; sourceTree = "<group>"; };
 		7E7564A80E7C06DB44287A44E13BD6BC /* PFPin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFPin.m; path = Parse/Parse/Internal/LocalDataStore/Pin/PFPin.m; sourceTree = "<group>"; };
 		7ED1FF11CE5EB354C49485895904C53A /* Pods-UnifiedForumModelParseImpl_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UnifiedForumModelParseImpl_Example-umbrella.h"; sourceTree = "<group>"; };
+		7F13237C293DAB060066EE8C /* UFMService+PostLike.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UFMService+PostLike.h"; path = "UnifiedForumModelParseImpl/Classes/UFMService+PostLike.h"; sourceTree = "<group>"; };
+		7F13237D293DAB060066EE8C /* UFMService+PostLike.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UFMService+PostLike.m"; path = "UnifiedForumModelParseImpl/Classes/UFMService+PostLike.m"; sourceTree = "<group>"; };
 		7F7807858E19D9EE9526CBBB2D8280A8 /* PFMutableFileState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFMutableFileState.m; path = Parse/Parse/Internal/File/State/PFMutableFileState.m; sourceTree = "<group>"; };
 		7F8B7ABAE60AD0BB5A205CE813DBF601 /* PFMutableObjectState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFMutableObjectState.h; path = Parse/Parse/Internal/Object/State/PFMutableObjectState.h; sourceTree = "<group>"; };
 		7FA017B38A4C1A1FB263C9FD57E813C8 /* PFRESTUserCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFRESTUserCommand.m; path = Parse/Parse/Internal/Commands/PFRESTUserCommand.m; sourceTree = "<group>"; };
@@ -1325,6 +1329,8 @@
 				3256762863A72BD38AF2FCC9CC7DC9F6 /* UFMService.m */,
 				79E9C7015E617DAB748ACBD40A4DA62E /* UFMService+PostModel.h */,
 				9734883692C4511EA8A440BC26A123E7 /* UFMService+PostModel.m */,
+				7F13237C293DAB060066EE8C /* UFMService+PostLike.h */,
+				7F13237D293DAB060066EE8C /* UFMService+PostLike.m */,
 				4B2D1EDF2AE87F78E123A899090B6A9B /* UFMService+TopicLike.h */,
 				F99BBEF0FBB31E1E172E4FB2EFDE3719 /* UFMService+TopicLike.m */,
 				AF740E88279527BBB319E3FB7C4882B2 /* UFMService+TopicModel.h */,
@@ -2060,6 +2066,7 @@
 				8636D8827E8158DB19D210F8565FFEA5 /* UFMService+TopicModel.h in Headers */,
 				B909868FC507045474DB496B9DEDFC9E /* UFMService+TopicShare.h in Headers */,
 				C93DDC82922A870D0392215D39FE879A /* UFMService+UserModel.h in Headers */,
+				7F13237E293DAB060066EE8C /* UFMService+PostLike.h in Headers */,
 				7394C4C8DB796060A67BA15469ED95E4 /* UFMTagModel.h in Headers */,
 				897EBD3D52CBE2A2E81819573ACFAEC8 /* UFMTopicModel.h in Headers */,
 				919E4687720C5983F9FAC970D99F8525 /* UFMUserModel.h in Headers */,
@@ -2789,6 +2796,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A79E7412BE39890A8D10C793A38F7AF3 /* UFMAppInfoModel.m in Sources */,
+				7F13237F293DAB060066EE8C /* UFMService+PostLike.m in Sources */,
 				7623D5FFA36BAD7FE97CB728B835DBD4 /* UFMCategoryModel.m in Sources */,
 				08B741DF678567263E21F9578C167397 /* UFMConstants.m in Sources */,
 				395208ADE2A835BD7040BDCC5D0D3B61 /* UFMFileModel.m in Sources */,

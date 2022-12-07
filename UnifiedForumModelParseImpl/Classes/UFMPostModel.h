@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 // ID
 @property (nonatomic, copy) NSString *postId;
 
-// post内容，post不允许有title
+// post内容，post没有title了
 @property (nonatomic, copy) NSString *content;
 
 // post可以有附加内容
