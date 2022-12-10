@@ -16,12 +16,18 @@
     PFUser *fromUser = (PFUser *)fromUserModel.metaData;
     UFPFPost *toPost = (UFPFPost *)toPostModel.metaData;
     [UFPFService addPostLikeWithFromUser:fromUser toPost:toPost error:error];
+    if (!*error){
+        toPostModel.likeCount++;
+    }
 }
 
 + (void)deletePostLikeFromUserModel:(UFMUserModel *)fromUserModel toPostModel:(UFMPostModel *)toPostModel error:(NSError **)error {
     PFUser *fromUser = (PFUser *)fromUserModel.metaData;
     UFPFPost *toPost = (UFPFPost *)toPostModel.metaData;
     [UFPFService deletePostLikeFromUser:fromUser toPost:toPost error:error];
+    if (!*error){
+        toPostModel.likeCount--;
+    }
 }
 
 @end
