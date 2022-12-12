@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 // - 查询某一个Topic的回帖
 + (NSArray<UFMPostModel *> *)findPostModelArrayToTopic:(UFMTopicModel *)toTopicModel
                                                orderBy:(NSString *)orderBy
+                                    isOrderByAscending:(BOOL)isOrderByAscending
                                                   page:(NSInteger)page
                                              pageCount:(NSInteger)pageCount
                                                  error:(NSError **)error;
@@ -26,6 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSArray<UFMPostModel *> *)findPostModelArrayToTopic:(UFMTopicModel *)toTopicModel
                                          fromUserModel:(UFMUserModel *)fromUserModel
                                                orderBy:(NSString *)orderBy
+                                    isOrderByAscending:(BOOL)isOrderByAscending
                                                   page:(NSInteger)page
                                              pageCount:(NSInteger)pageCount
                                                  error:(NSError **)error;

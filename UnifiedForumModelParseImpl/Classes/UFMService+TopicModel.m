@@ -16,10 +16,11 @@
 
 // 0 无条件，直接查询Topic表，根据orderBy进行排序，例如查询热门的Topic。
 + (NSArray<UFMTopicModel *> *)findTopicModelArrayOrderBy:(NSString *)orderBy
+                                      isOrderByAscending:(BOOL)isOrderByAscending
                                                     page:(NSUInteger)page
                                                pageCount:(NSUInteger)pageCount
                                                    error:(NSError **)error {
-    NSArray<UFPFTopic *> *metaDataArray = [UFPFService findTopicsOrderBy:orderBy page:page pageCount:pageCount error:error];
+    NSArray<UFPFTopic *> *metaDataArray = [UFPFService findTopicsOrderBy:orderBy isOrderByAscending:isOrderByAscending page:page pageCount:pageCount error:error];
     
     if (*error) {
         return nil;
@@ -31,10 +32,11 @@
 // 1 根据Category查询，一般用来展示某个板块的内容
 + (NSArray<UFMTopicModel *> *)findTopicModelArrayWithCategory:(NSString *)category
                                                       orderBy:(NSString *)orderBy
+                                           isOrderByAscending:(BOOL)isOrderByAscending
                                                          page:(NSUInteger)page
                                                     pageCount:(NSUInteger)pageCount
                                                         error:(NSError **)error {
-    NSArray<UFPFTopic *> *metaDataArray = [UFPFService findTopicsWithCategory:category orderBy:orderBy page:page pageCount:pageCount error:error];
+    NSArray<UFPFTopic *> *metaDataArray = [UFPFService findTopicsWithCategory:category orderBy:orderBy isOrderByAscending:isOrderByAscending page:page pageCount:pageCount error:error];
     
     if (*error) {
         return nil;
@@ -46,10 +48,11 @@
 // 2 根据Tag查询，一般用来展示某个标签的内容
 + (NSArray<UFMTopicModel *> *)findTopicModelArrayWithTag:(NSString *)tag
                                                  orderBy:(NSString *)orderBy
+                                      isOrderByAscending:(BOOL)isOrderByAscending
                                                     page:(NSUInteger)page
                                                pageCount:(NSUInteger)pageCount
                                                    error:(NSError **)error {
-    NSArray<UFPFTopic *> *metaDataArray = [UFPFService findTopicsWithTag:tag orderBy:orderBy page:page pageCount:pageCount error:error];
+    NSArray<UFPFTopic *> *metaDataArray = [UFPFService findTopicsWithTag:tag orderBy:orderBy isOrderByAscending:isOrderByAscending page:page pageCount:pageCount error:error];
     
     if (*error) {
         return nil;
@@ -61,12 +64,13 @@
 // 3 根据fromUser查询，一般用来展示某个用户的内容
 + (NSArray<UFMTopicModel *> *)findTopicModelArrayCreatedByUserModel:(UFMUserModel *)userModel
                                                             orderBy:(NSString *)orderBy
+                                                 isOrderByAscending:(BOOL)isOrderByAscending
                                                                page:(NSInteger)page
                                                           pageCount:(NSInteger)pageCount
                                                               error:(NSError **)error {
     if ([userModel.metaData isKindOfClass:[PFUser class]]) {
         PFUser *user = (PFUser *)userModel.metaData;
-        NSArray<UFPFTopic *> *metaDataArray = [UFPFService findTopicsCreatedByUser:user orderBy:orderBy page:page pageCount:pageCount error:error];
+        NSArray<UFPFTopic *> *metaDataArray = [UFPFService findTopicsCreatedByUser:user orderBy:orderBy isOrderByAscending:isOrderByAscending page:page pageCount:pageCount error:error];
         if (*error) {
             return nil;
         } else {
@@ -80,12 +84,13 @@
 // 4 根据关注，一般用来展示用户关注的内容
 + (NSArray<UFMTopicModel *> *)findTopicModelArrayFollowedByUserModel:(UFMUserModel *)userModel
                                                              orderBy:(NSString *)orderBy
+                                                  isOrderByAscending:(BOOL)isOrderByAscending
                                                                 page:(NSInteger)page
                                                            pageCount:(NSInteger)pageCount
                                                                error:(NSError **)error {
     if ([userModel.metaData isKindOfClass:[PFUser class]]) {
         PFUser *user = (PFUser *)userModel.metaData;
-        NSArray<UFPFTopic *> *metaDataArray = [UFPFService findTopicsFollowedByUser:user orderBy:orderBy page:page pageCount:pageCount error:error];
+        NSArray<UFPFTopic *> *metaDataArray = [UFPFService findTopicsFollowedByUser:user orderBy:orderBy isOrderByAscending:isOrderByAscending page:page pageCount:pageCount error:error];
         if (*error) {
             return nil;
         } else {

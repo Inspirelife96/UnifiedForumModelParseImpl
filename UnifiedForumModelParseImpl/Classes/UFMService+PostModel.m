@@ -16,13 +16,14 @@
 // - 查询某一个Topic的回帖
 + (NSArray<UFMPostModel *> *)findPostModelArrayToTopic:(UFMTopicModel *)toTopicModel
                                                orderBy:(NSString *)orderBy
+                                    isOrderByAscending:(BOOL)isOrderByAscending
                                                   page:(NSInteger)page
                                              pageCount:(NSInteger)pageCount
                                                  error:(NSError **)error {
     UFPFTopic *topic = (UFPFTopic *)toTopicModel.metaData;
     
     
-    NSArray<UFPFPost *> *metaDataArray = [UFPFService findPostsToTopic:topic orderBy:orderBy page:page pageCount:pageCount error:error];
+    NSArray<UFPFPost *> *metaDataArray = [UFPFService findPostsToTopic:topic orderBy:orderBy isOrderByAscending:isOrderByAscending page:page pageCount:pageCount error:error];
     
     if (*error) {
         return nil;
@@ -35,13 +36,14 @@
 + (NSArray<UFMPostModel *> *)findPostModelArrayToTopic:(UFMTopicModel *)toTopicModel
                                          fromUserModel:(UFMUserModel *)fromUserModel
                                                orderBy:(NSString *)orderBy
+                                    isOrderByAscending:(BOOL)isOrderByAscending
                                                   page:(NSInteger)page
                                              pageCount:(NSInteger)pageCount
                                                  error:(NSError **)error {
     UFPFTopic *topic = (UFPFTopic *)toTopicModel.metaData;
     PFUser *fromUser = (PFUser *)fromUserModel.metaData;
     
-    NSArray<UFPFPost *> *metaDataArray = [UFPFService findPostsToTopic:topic fromUser:fromUser orderBy:orderBy page:page pageCount:pageCount error:error];
+    NSArray<UFPFPost *> *metaDataArray = [UFPFService findPostsToTopic:topic fromUser:fromUser orderBy:orderBy isOrderByAscending:isOrderByAscending page:page pageCount:pageCount error:error];
     
     if (*error) {
         return nil;
