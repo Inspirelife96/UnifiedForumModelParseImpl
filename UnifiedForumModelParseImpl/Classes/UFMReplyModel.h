@@ -55,6 +55,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)save:(NSError **)error;
 
+- (BOOL)isLikedByUserModel:(UFMUserModel *)userModel error:(NSError **)error;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -113,4 +113,11 @@
     }
 }
 
+- (BOOL)isLikedByUserModel:(UFMUserModel *)userModel error:(NSError **)error {
+    UFPFReply *reply = (UFPFReply *)self.metaData;
+    PFUser *user = (PFUser *)userModel.metaData;
+    
+    return [UFPFService isReply:reply likedbyUser:user error:error];
+}
+
 @end
