@@ -16,10 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UFMTimeLineModel : UFMObjectModel
 
-@property (nonatomic, strong) UFPFTopic *topic;
-@property (nonatomic, strong) UFPFPost *post;
-@property (nonatomic, strong) UFPFReply *reply;
-
 // ID
 @property (nonatomic, copy) NSString *timeLineId;
 
